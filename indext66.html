@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="mybtn">click me:D</button>
+
+    <p id="row"></p>
+    <p id="demo1"></p>
+    <script>
+      var x = document.getElementById("mybtn");
+      x.addEventListener("mouseover", mymove);
+      x.addEventListener("mouseout", myout);
+      x.addEventListener("click", myclick);
+      function mymove() {
+          document.getElementById('row').innerHTML+="over mouse <br>";
+      }
+      function myout() {
+          document.getElementById('row').innerHTML+="out mouse <br>";
+      }
+      function myclick() {
+          document.getElementById('row').innerHTML+="click on <br>";
+      }
+      window.addEventListener("resize",function(){mywidth(window.innerWidth)})
+
+      function mywidth(width){
+          document.getElementById('demo1').innerHTML=width;
+      }
+    </script>
+  </body>
+</html>

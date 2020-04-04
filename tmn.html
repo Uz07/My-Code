@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #cnm {
+        width: 450px;
+        height: 400px;
+        background: black;
+        position: relative;
+      }
+      #nm {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        background-color:white;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cnm">
+      <div id="nm">iron</div>
+    </div>
+    <button onclick="move()">Move your ass</button>
+  </body>
+  <script>
+    function move() {
+      var importten = document.getElementById("nm");
+      var pos = 0;
+      var id = setInterval(frm, 5);
+      function frm() {
+        if (pos == 400) {
+          clearInterval(id);
+        } else {
+          pos++;
+          importten.style.top = pos + "px";
+          importten.style.right = pos + "px";
+        }
+      }
+    }
+  </script>
+</html>

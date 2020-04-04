@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="do" onmousedown="mdown(this)" onmouseup="myUp(this)" style="background-color: crimson; width: 120px; height: 120px; padding: 40px;"></div>
+    <script>
+        function mdown(obj) {
+            obj.style.backgroundColor = "green";
+            obj.innerHTML = "thank you";
+        }
+
+        function myUp(obj) {
+            obj.style.backgroundColor = "blue";
+            obj.innerHTML = "need backup";
+        }
+    </script>
+</body>
+
+</html>

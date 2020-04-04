@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="red">
+      <p id="row">please see the text</p>
+      <p id="rew">please see the text two</p>
+    </div>
+    <script>
+      var pop = document.createElement("p");
+      var nop = document.createTextNode("this is a new text");
+      pop.appendChild(nop);
+
+      var elem = document.getElementById("red");
+      //elem.appendChild(pop);
+      var childer=document.getElementById("rew");
+           elem.insertBefore(pop,childer);
+    </script>
+  </body>
+</html>

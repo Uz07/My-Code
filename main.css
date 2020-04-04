@@ -1,0 +1,34 @@
+.container {
+  height: 100vh;
+  margin: 2em;
+  display: inline-grid;
+  grid-template-columns: 160px 950px 160px;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-areas:
+    "kito to  me"
+    "kito to  me";
+    
+    ;
+  column-gap: 5px;
+}
+
+.me {
+  grid-area: me;
+  background: red;
+  background: url(img3.jpg);
+  background-size: cover;
+}
+
+.to {
+  grid-area: to;
+  background: blue;
+  background: url(img2.jpg);
+  background-size: cover;
+}
+
+.kito {
+  grid-area: kito;
+  background: chartreuse;
+  background: url(img1.jpg);
+  background-size: cover;
+}

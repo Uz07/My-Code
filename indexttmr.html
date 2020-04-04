@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>hi mr ali</p>
+    <p>hi mr rosemberg</p>
+    <p>hi mr avid</p>
+    <p id="demo"></p>
+    <button onclick="myfun()">click me!</button>
+
+    <script>
+        var com=document.getElementsByTagName('p');
+        document.getElementById('demo').innerHTML=com[0].innerHTML;
+    function myfun(){
+     var non=document.getElementsByTagName('p');
+     var i ;
+     for(i=0;i<non.length;i++){
+         non[i].style.color="red";
+         
+         
+     }
+     
+    }
+    
+    </script>
+
+</body>
+</html>

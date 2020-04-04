@@ -1,0 +1,87 @@
+$bg-gray: rgb(68, 66, 66);
+$bg-wite: cornsilk;
+$bg-yellow: rgb(224, 224, 44);
+$bg-primery: rgb(83, 83, 206);
+$bg-night: rgba(17, 17, 17, 0.596);
+@mixin shet {
+  color: orange;
+  font-size: 18px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+.bod {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-areas:
+    "heed heed"
+    "boy  boy"
+    "foot foot";
+  header.t-head {
+    grid-area: heed;
+    background: $bg-gray;
+    display: flex;
+    flex-direction: row;
+    transition: width 2s;
+
+    .t-menu-rtl {
+      font-size: 16px;
+      color: $bg-wite;
+      font-weight: bold;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+
+  section.t-body {
+    grid-area: boy;
+    background: $bg-night;
+  }
+  footer.t-footer {
+    grid-area: foot;
+    background: $bg-primery;
+  }
+  .t-menu-rtl {
+    display: inline-flex;
+    padding: 2px;
+  }
+  .t-ul .t-li {
+    color: cornsilk;
+    list-style: none;
+    display: flex;
+
+  }
+
+ .d-ul .d-li{
+  color: cornsilk;
+  list-style: none;
+ display: none;
+ }
+
+
+  .t-a {
+    text-decoration: none;
+    color: $bg-yellow;
+    padding: 1em;
+    display: flex;
+    &:hover {
+      @include shet();
+      background: rgb(88, 83, 83);
+      border-radius: 5px;
+    }
+  }
+}
+.t-h {
+  font-size: 1rem;
+  color: $bg-wite;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: $bg-gray;
+  padding: 10px;
+}

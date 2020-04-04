@@ -1,0 +1,57 @@
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.box{
+    display: flex;
+    
+}
+.icons{
+    position: relative;
+    display: inline-block;
+    width: 120px;
+}
+
+.icons i{
+   
+    display:block;
+    font-size:30px;
+   text-align: center;
+}
+
+.icons span:after{
+    content: '';
+    background: black;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    
+}
+
+.icons span{
+  position: relative;
+  bottom: 0;
+  display: block;
+  background: black;
+  color: antiquewhite;
+  padding: 5px; 
+  border-radius: 3px; 
+ text-align: center;
+ margin: 5px;
+ transition: 0.6s ;
+ opacity: 0;
+
+}
+
+
+.icons:hover > span{
+    opacity: 1;
+}

@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+  </body>
+  <script>
+    function person(name, family, age) {
+      this.name = name;
+      this.family = family;
+      this.age = age;
+      this.fullName = function() {
+        return this.name + " " + this.family+" "+this.age;
+      }
+    }
+    var iman = new person("iman", "madaeni", 25);
+    var rasol = new person("rasol", "hajari", 21);
+    iman.carname = "pride";
+    rasol.motor = "honda";
+    var hosein = new person("hosein", "mosavi", 22);
+    console.log(iman.fullName());
+    var people=[];
+    people.push(new person("ali","shiri",28));
+    people.push(new person("mmad","mani",20));
+    people.push(new person("maani","jany",19));
+    var text="";
+    for(x in people)
+    {
+      text+=people[x].name+" "+people[x].family+" "+people[x].age+"</br>";
+
+    }
+    document.getElementById('demo').style.color="green";
+    document.getElementById('demo').innerHTML=text;
+  </script>
+</html>

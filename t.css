@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  background: #333;
+
+}
+
+
+.me{
+  margin-top:400px;
+  /* خودم نوشتم زیاد بالا بود مشخص نبود*/
+}
+
+ul {
+  display: flex;
+
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #777;
+  margin: 0 20px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+  /* طرز قرارگیری متن و همه*/
+}
+
+ul li:hover {
+  box-sizing: border-box;
+  background: #86ff3b;
+  box-shadow: 0 0 0 4px #333,
+              0 0 0 6px #86ff3b;
+              /* سایه انداخته شده*/
+}
+
+ul li .content{
+  position: absolute;
+  bottom:55px;
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity:0;
+  transition: 0.5s;
+ transform: translateX(-50%) translateY(-50%);
+ /* کد  تنظیم نمایشش*/
+}
+ 
+ul li .content:before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  bottom:0;
+  left:194px;
+  transform: rotate(45deg);
+  /* کد تیکه پایینی*/
+}
+
+ul li:hover .content{
+  visibility: visible;
+  opacity:1;
+  transform: translateX(-50%) translateY(0px);
+  /* نمایش شدن اون کانتنت*/
+}

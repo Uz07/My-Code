@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+ <input type="text" id="demo"><button onclick="show()">click me!</button>
+ <p id="p01"></p>
+</body>
+  <script>
+function show(){
+  var message,x;
+  message=document.getElementById('p01');
+  x=document.getElementById("demo").value;
+  try{
+    if(x=="") throw message="is null";
+    if(isNaN(x))throw message="not number"
+  }
+  catch(err){
+    document.getElementById('p01').innerHTML=message;
+  }
+  finally{
+    document.getElementById('demo').value="";
+  }
+}
+  </script>
+</html>

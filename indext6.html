@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="this.innerHTML='opps'    ">click me!!!!</button>
+    <h1 onclick="this.innerHTML='Oooops !!!!!!'">Click Me 2 !</h1>
+    <h1 onclick="this.innerHTML='Oooops !!!!!!' ">Click Me !</h1>
+    <button onclick="date()">what time is it?</button>
+    <p id="done"></p>
+    <button onclick="mybot()">rasol button</button>
+    your name: <input type="text" id="do" onchange="onchangem()" />
+    <br />
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mUp(this)"
+      style="width: 120px; height: 120px; padding: 40px; background: black; color: blanchedalmond;"
+    >
+      click me!
+    </div>
+    <br />
+   
+  </body>
+  <script>
+    function date() {
+      document.getElementById("done").innerHTML = Date();
+    }
+    function mybot() {
+      alert("hello rasol");
+    }
+    function onchangem() {
+      var element = document.getElementById("do");
+      element.value = element.value.toUpperCase();
+    }
+
+    function mOver(Obj) {
+      Obj.innerHTML = "tank you";
+    }
+
+    function mUp(Obj) {
+      Obj.innerHTML = "click me!";
+    }
+
+    
+  </script>
+</html>
